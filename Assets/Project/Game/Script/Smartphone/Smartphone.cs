@@ -1,5 +1,6 @@
 using Camera;
 using UniRx;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ namespace Smartphone
     public class Smartphone : MonoBehaviour
     {
         [SerializeField] private InputAction _powerSupply;
+        [SerializeField] private InputAction _backAction;
         [SerializeField] private Button _playerBack;
         [SerializeField] private GameObject _mapUI;
         [SerializeField] private GameObject _cameraUI;
@@ -29,9 +31,18 @@ namespace Smartphone
         [Inject] private readonly ILevelCalculation _levelCalculation;
         [Inject] private readonly IReadBatteryLevel _readBatteryLevel;
         
-        private void OnEnable() => _powerSupply.Enable();
-        private void OnDisable() => _powerSupply.Disable();
-        
+        private void OnEnable()
+        {
+            _powerSupply.Enable();
+            _backAction.Enable();
+        }
+
+        private void OnDisable()
+        {
+            _powerSupply.Disable();
+            _backAction.Disable();
+        }
+
         private void Start()
         {
             // マップ開閉入力を購読します。
@@ -48,12 +59,14 @@ namespace Smartphone
                     {
                         _temporaryTime = _operatingHours;
                         _mapUI.gameObject.SetActive(false);
+                        Cursor.visible = false;
                         _isInit = false;
                     }
                     
                     if (_isActive)
                     {
                         _mapUI.gameObject.SetActive(true);
+                        Cursor.visible = true;
                     }
                 })
                 .AddTo(this);
@@ -67,10 +80,22 @@ namespace Smartphone
                     _isInit = false;
                     _isActive = false;
                     _temporaryTime = _operatingHours;
-                    _playerBack.onClick.Invoke();
                     _mapUI.SetActive(false);
                     _cameraUI.SetActive(false);
+                    Cursor.visible = false;
                     
+                })
+                .AddTo(this);
+   
+            
+            // マップ開閉入力を購読します。
+            _backAction
+                .PerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    if(!_cameraUI.activeInHierarchy) return;
+                    _playerBack.onClick.Invoke();
+                    Cursor.visible = true;
                 })
                 .AddTo(this);
         }

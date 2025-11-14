@@ -12,6 +12,11 @@ namespace RaycastHitExtensions
         {
             return (1 << hit.collider.gameObject.layer & mask) != 0;
         }
+        
+        public static bool IsInLayerMask(this Collider hit, LayerMask mask)
+        {
+            return (1 << hit.gameObject.layer & mask) != 0;
+        }
     }
     
 

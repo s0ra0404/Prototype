@@ -18,6 +18,8 @@ public class SurveillanceCameraSwitcher : MonoBehaviour
     
     private void Start()
     {
+        Cursor.visible = false;
+        
         foreach (var data in _datas)
         {
             data.Button.onClick.AddListener(() =>
@@ -29,11 +31,13 @@ public class SurveillanceCameraSwitcher : MonoBehaviour
                 {
                     _mapUI.gameObject.SetActive(false);
                     _cameraUI.gameObject.SetActive(true);
+                    Cursor.visible = false;
                 }
                 else
                 {
                     _cameraUI.gameObject.SetActive(false);
                     _mapUI.gameObject.SetActive(true);
+                    Cursor.visible = true;
                 }
             });
         }
