@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Editor/Folder/URLWindow.uss?fileID=7433441132597879392&amp;guid=2d8d0e79681dd11479cb6f9eacc402a1&amp;type=3#URLWindow" />
+    <ui:VisualElement name="Data" class="DataBox" style="max-height: 50px;">
+        <ui:Toggle value="true" name="Toggle" class="Toggle" />
+        <ui:VisualElement class="Line_B" />
+        <ui:VisualElement name="DataArea" class="DataArea">
+            <ui:VisualElement class="TitleBox">
+                <ui:Label text="GitHub" name="Title" class="TitleText" />
+            </ui:VisualElement>
+            <ui:VisualElement class="URLBox">
+                <ui:Label text="Labelsfsfsfsfsfsfsfsfsfsfs" name="URL" class="URLText" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

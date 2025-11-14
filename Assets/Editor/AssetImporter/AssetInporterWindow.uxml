@@ -1,0 +1,18 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Editor/AssetImporter/AssetInporterWindow.uss?fileID=7433441132597879392&amp;guid=2d8d0e79681dd11479cb6f9eacc402a1&amp;type=3#AssetInporterWindow" />
+    <ui:TabView>
+        <ui:Tab label="AssetImport" name="AssetImport" style="max-height: 540px;">
+            <ui:VisualElement name="Window" style="flex-grow: 1; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; margin-top: 10px;">
+                <ui:ScrollView name="ScrollView" />
+                <ui:Button text="Import" name="ImportButton" style="align-self: flex-end;" />
+            </ui:VisualElement>
+        </ui:Tab>
+        <ui:Tab label="AssetSave" name="AssetSave">
+            <ui:VisualElement name="Window" style="flex-grow: 1; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; margin-top: 10px;">
+                <ui:TextField label="Title" placeholder-text="Title Text" name="TitleText" style="margin-bottom: 8px;" />
+                <ui:TextField label="URL" placeholder-text="URL Text" name="URLText" style="margin-bottom: 10px;" />
+                <ui:Button text="Save" name="SaveButton" style="align-self: flex-end;" />
+            </ui:VisualElement>
+        </ui:Tab>
+    </ui:TabView>
+</ui:UXML>

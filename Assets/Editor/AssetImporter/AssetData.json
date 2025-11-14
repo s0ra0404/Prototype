@@ -1,0 +1,72 @@
+{
+    "datas": [
+        {
+            "title": "Extenject",
+            "url": "https://github.com/Mathijs-Bakker/Extenject.git?path=UnityProject/Assets/Plugins/Zenject/Source"
+        },
+        {
+            "title": "UniRx",
+            "url": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts"
+        },
+        {
+            "title": "UniTask",
+            "url": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
+        },
+        {
+            "title": "JetBrains Rider Editor",
+            "url": "com.unity.ide.rider"
+        },
+        {
+            "title": "Addressables",
+            "url": "com.unity.addressables"
+        },
+        {
+            "title": "SmartPool",
+            "url": "https://github.com/S0raSky0/SmartPool.git?path=/Assets/SmartPool"
+        },
+        {
+            "title": "FluxStateMachine",
+            "url": "https://github.com/S0raSky0/FluxStateMachine.git?path=/Assets/FluxStateMachine"
+        },
+        {
+            "title": "FadeSystem",
+            "url": "https://github.com/S0raSky0/FadeSystem.git?path=/Assets/FadeSystem"
+        },
+        {
+            "title": "Extendables",
+            "url": "https://github.com/S0raSky0/Extendables.git?path=/Assets/Extendables"
+        },
+        {
+            "title": "CameraChoreographer",
+            "url": "https://github.com/S0raSky0/CameraChoreographer.git?path=/Assets/CameraChoreographer"
+        },
+        {
+            "title": "SuperiorUI",
+            "url": "https://github.com/S0raSky0/SuperiorUI.git?path=/Assets/SuperiorUI"
+        },
+        {
+            "title": "Cinemachine",
+            "url": "com.unity.cinemachine"
+        },
+        {
+            "title": "Input System",
+            "url": "com.unity.inputsystem"
+        },
+        {
+            "title": "High Definition RP",
+            "url": "com.unity.render-pipelines.high-definition"
+        },
+        {
+            "title": "Universal RP",
+            "url": "com.unity.render-pipelines.universal"
+        },
+        {
+            "title": "ProBuilder",
+            "url": "com.unity.probuilder"
+        },
+        {
+            "title": "Recorder",
+            "url": "com.unity.recorder"
+        }
+    ]
+}
